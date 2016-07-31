@@ -11,8 +11,8 @@ func handleConnection(conn net.Conn) {
 	ip := ""
 	if len(addr_parts) > 0 {
 		ip = addr_parts[0]
+		conn.Write([]byte(ip))
 	}
-	conn.Write([]byte(ip))
 	conn.Close()
 }
 
