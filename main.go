@@ -23,9 +23,7 @@ func main() {
 	}
 
 	for {
-		conn, err := ln.Accept()
-		if err != nil {
-		}
+		conn, _ := ln.Accept()
 		go handleConnection(conn)
 	}
 }
